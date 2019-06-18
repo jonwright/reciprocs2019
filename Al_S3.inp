@@ -1,0 +1,102 @@
+
+# File names and Format
+# Directory to save output files
+direc 'Al_s3'
+stem 'Al_s3'
+
+make_image 1
+output  '.edf' '.flt' '.gve' '.par' '.ubi' 
+
+#Structural parameters
+structure_phase_0 'Al.cif'
+
+#Crystal/grains parameters
+# Total number of grains summed over all phases to be simulated. 
+#   Needs to match the number of U_Grains_X key words below
+
+
+# Grain orientation [U]
+# Grain Diameter [mm]
+no_grains 5
+U_grains_0 0.9987503020541334 -0.03968074196279848 0.030385405445032126 0.040280596976814416 0.9990002416433067 -0.019390479720887283 -0.02958559875967754 0.020590189748919165 0.9993501570681493
+pos_grains_0 0.0 0.0 0.0
+size_grains_0 0.1
+U_grains_1 0.6292512382458794 -0.33911365836322205 0.6993173856537099 0.6993173856537099 0.6396463089560083 -0.31907333571048424 -0.33911365836322205 0.689822097464605 0.6396463089560083
+pos_grains_1 0.2 0.2 0.2
+size_grains_1 0.1
+U_grains_2 0.6588035117270005 0.649508175209234 0.3796275322899315 -0.29321936274930105 0.6863903991731184 -0.6655002819171912 -0.6928205671348576 0.32711977968221095 0.642644778626261
+pos_grains_2 0.2 0.2 -0.2
+size_grains_2 0.1
+U_grains_3 0.672863557678511 -0.6821588941962773 -0.2862060024128241 0.34692682538505376 0.6326829365373658 -0.6923540132350674 0.6533731021219542 0.36656724469511426 0.6623685111327128
+pos_grains_3 0.2 -0.2 0.2
+size_grains_3 0.1
+U_grains_4 0.6323496837518013 -0.702415831159632 0.3267198763395336 0.3727807983462368 0.6456099230179573 0.6665000402738843 -0.6790937739689116 -0.2996661933503186 0.6700983649581532
+pos_grains_4 -0.2 0.2 0.2
+size_grains_4 0.1
+
+# Do not generate sizes (supplied)
+gen_size 0 0 0 0
+#Grain orientation : random (1) or specify specific orientation matrices (0)
+gen_U 0
+# Do not generate positions
+gen_pos 0 0
+
+
+# Sample geometry
+sample_xyz 0.2 0.2 0.2
+# Generate strain (or not)
+gen_eps 1 0 0 0 0
+
+# Instrumentation
+# Detector pixel size [mm]
+y_size 0.1 
+z_size 0.1
+
+# Detector size [pixels]
+dety_size 1024
+detz_size 1024
+
+# Distance from sample to detector [mm]
+distance 120.
+# Detector tilt [radians]
+tilt_x 0.
+tilt_y 0.
+tilt_z 0.
+# Detector orientation (matrix:
+#   [[o11,o12],
+#    [o21,o22] ]
+o11 1
+o12 0
+o21 0
+o22 1
+
+# Instrumental
+# Beam specs
+wavelength 0.248
+beamflux 1e12
+beampol_factor 1
+beampol_direct 0
+# Beam center on detector [pixels]
+dety_center 510.0
+detz_center 512.0
+
+# Omega scan range [degrees]
+omega_start -180
+omega_end 180
+# Omega step size [degrees]
+omega_step 1.0
+# Omega rotation direction [degrees]
+omega_sign 1
+# Wedge angle (below) omega axis [degrees]
+wedge 0
+
+# No Noise
+noise 0
+# Reflections
+# if the value is zero (0) the structure factor squared are used to calculate the intensities
+intensity_const 0
+lorentz_apply 1
+beampol_apply 1
+# peakshape 1= Gaussian, 2px, 0.8 deg
+peakshape 1 2 0.8
+psf 3.0
