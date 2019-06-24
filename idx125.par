@@ -1,0 +1,10 @@
+cosine_tol -0.006
+ds_tol 0.005
+eta_range 0.0
+hkl_tol 0.02
+max_grains 1000
+minpks 45
+ring_1 1
+ring_2 1
+uniqueness 0.5
+wavelength 0.248
